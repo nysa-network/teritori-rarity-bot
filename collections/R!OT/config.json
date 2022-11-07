@@ -1,0 +1,17 @@
+{
+    "owner": "tori1thefy6rw9zvdt26jnscc7lszz02vymjw45eg9x",
+    "nft_addr": "tori1j08452mqwadp8xu25kn9rleyl2gufgfjnv0sn8dvynynakkjukcq3vtuv2",
+    "nft_symbol": "R!OT",
+    "nft_max_supply": "3000",
+    "nft_price_amount": "5500000",
+    "nft_base_uri": "ipfs://bafybeidwfcuber7ap3or2jratqud5pdgd2s5cdgogdh7as67ljgichyiom/collection.json",
+    "mint_start_time": 1667589351,
+    "whitelist_mint_period": 86400,
+    "is_mintable": true,
+    "whitelist_mint_max": "5",
+    "mint_max": null,
+    "price_denom": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+    "royalty_percentage": 8,
+    "royalty_payment_address": "tori1thefy6rw9zvdt26jnscc7lszz02vymjw45eg9x",
+    "contract": "tori1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqg87tkw"
+}
