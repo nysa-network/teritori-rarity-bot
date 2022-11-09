@@ -54,6 +54,8 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
 
         if (interaction.commandName === 'rarity') {
             await CmdRarity.run(client, interaction)
+        } else if (interaction.commandName === 'rarity-riot') {
+            await CmdRarityRiot.run(client, interaction)
         }
     });
 
