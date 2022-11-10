@@ -25,7 +25,15 @@ export const CmdRarity: any = {
 
         const config = await get_config(collection_name as string)
 
-        const nft = await get_collection(collection_name as string, id as number) as any
+        let nft;
+        try {
+            nft = await get_collection(collection_name as string, id as number) as any
+        } catch (err) {
+            await interaction.reply({
+                content: "failed to get nft"
+            })
+            return
+        }
 
         const fields = nft.info.extension.attributes
             .filter((x: any) => x.value !== 'None')
