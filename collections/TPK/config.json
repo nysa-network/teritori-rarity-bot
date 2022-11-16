@@ -1,0 +1,19 @@
+{
+    "owner": "tori1thefy6rw9zvdt26jnscc7lszz02vymjw45eg9x",
+    "minter": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "nft_addr": "tori12pwnhtv7yat2s30xuf4gdk9qm85v4j3e6p44let47pdffpklcxlq34lcwf",
+    "nft_symbol": "TPK",
+    "nft_max_supply": "10000",
+    "nft_price_amount": "43000000",
+    "nft_base_uri": "ipfs://bafybeiavhowsyxdknqh6bnnndubmcchjaqy2ccu3btztcgdasnabcv3twe/collection.json",
+    "mint_start_time": 1668016851,
+    "whitelist_mint_period": 86400,
+    "whitelist_mint_max": "10",
+    "whitelist_mint_price_amount": "36000000",
+    "is_mintable": true,
+    "mint_max": null,
+    "price_denom": "utori",
+    "royalty_percentage": 10,
+    "royalty_payment_address": "tori1h2rpafgcknpsnae0dnds5h7mzcxzsaxvjeglkh",
+    "contract": "tori1plr28ztj64a47a32lw7tdae8vluzm2lm7nqk364r4ws50rgwyzgsapzezt"
+}

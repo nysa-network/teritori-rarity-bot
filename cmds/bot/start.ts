@@ -4,9 +4,9 @@ import yargs from "yargs";
 import { CosmWasmClient } from "cosmwasm";
 
 import { CmdRarity } from "../../pkg/discord/CmdRarity";
-import { CmdRarityRiot } from "../../pkg/discord/CmdRarityRiot"
+import { Collection } from "../../pkg/discord/Collection"
 
-import { REST, Routes, Client, SlashCommandBuilder, GatewayIntentBits } from "discord.js";
+import { REST, Routes, Client, SlashCommandBuilder, GatewayIntentBits, EmbedBuilder } from "discord.js";
 
 export const command = "start";
 
@@ -33,14 +33,28 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
     const rest = new REST({ version: '10' }).setToken(discord_token);
     const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+    const collections = [
+        new Collection("rarity-riot", "riot", "R!OT"),
+        new Collection("rarity-toripunk", "toripunk", "TPK"),
+    ]
+
+    const error_resp = new EmbedBuilder()
+        .setColor(0x0099FF)
+        .setTitle(`This collection does not exist`)
+        .addFields(
+            ...collections.map((x: Collection) => ({
+                name: x.name,
+                value: "\u200B"
+            }))
+        )
+
     // Commands
     await rest.put(Routes.applicationCommands(discord_client_id), {
         body: [
             CmdRarity.cmd,
-            CmdRarityRiot.cmd,
+            ...collections.map((x) => x.GetSlashCmd())
         ]
-    })
-        .catch((err) => console.error(err));
+    }).catch((err) => console.error(err));
 
     // Handlers
     client.on('ready', () => {
@@ -51,11 +65,28 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
         if (!interaction.isChatInputCommand()) {
             return;
         }
+        let cmd;
 
         if (interaction.commandName === 'rarity') {
-            await CmdRarity.run(client, interaction)
-        } else if (interaction.commandName === 'rarity-riot') {
-            await CmdRarityRiot.run(client, interaction)
+            const collection_name = interaction.options.get("collection", true)?.value
+            cmd = collections.find((x: Collection) => x.name === collection_name)
+        } else {
+            cmd = collections.find((x: Collection) => x.cmd === interaction.commandName)
+        }
+
+        if (!cmd) {
+            interaction.reply({
+                embeds: [error_resp],
+            })
+            return
+        }
+
+        try {
+            await cmd.Run(client, interaction)
+        } catch (err) {
+            console.log(`[ERROR] ${interaction.commandName}: `, err)
+            interaction.reply("An error occured, please contact an administrator")
+            return
         }
     });
 
