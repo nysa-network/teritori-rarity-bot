@@ -7,7 +7,6 @@ export const get_config = async function (collection_name: String) {
 }
 
 export const get_collection = async function (collection_name: String, id: Number) {
-    console.log(collection_name)
     const collections = JSON.parse(fs.readFileSync(`./collections/${collection_name}/collection.json`, 'utf-8'))
 
     const nft = Object.values(collections)
