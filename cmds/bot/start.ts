@@ -75,7 +75,7 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
         }
 
         if (!cmd) {
-            interaction.reply({
+            await interaction.reply({
                 embeds: [error_resp],
             })
             return
@@ -84,8 +84,9 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
         try {
             await cmd.Run(client, interaction)
         } catch (err) {
-            console.log(`[ERROR] ${interaction.commandName}: `, err)
-            interaction.reply("An error occured, please contact an administrator")
+            console.log(`[ERROR] ${interaction.commandName}: `, interaction.options, err)
+            await interaction.reply(err)
+            // interaction.reply("An error occured, please contact an administrator")
             return
         }
     });

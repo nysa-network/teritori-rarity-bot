@@ -24,19 +24,15 @@ export class Collection {
     }
 
     async Run(client: Client, interaction: CommandInteraction) {
-        const id = interaction.options.get("id", true)?.value
+        const id = interaction.options.get("id", true)?.value as number
 
         const config = await get_config(this.ticker)
 
-        let nft;
-        try {
-            nft = await get_collection(this.ticker, id as number) as any
-        } catch (err) {
-            await interaction.reply({
-                content: "failed to get nft"
-            })
-            return
+        if (id > parseInt(config.nft_max_supply)) {
+            throw `Please select an nft between 1 and ${config.nft_max_supply}`
         }
+
+        const nft = await get_collection(this.ticker, id) as any
 
         const fields = nft.info.extension.attributes
             .filter((x: any) => x.value !== 'None')
