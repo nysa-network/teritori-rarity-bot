@@ -3,6 +3,7 @@ import * as fs from "fs";
 import yargs from "yargs";
 import { CosmWasmClient } from "cosmwasm";
 import * as cliProgress from "cli-progress"
+import { formatEmoji } from "discord.js";
 
 export const command = "add";
 
@@ -62,14 +63,21 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
         let nft;
 
         if (!file_exist) {
-            nft = await client.queryContractSmart(MINTER_CONTRACT, {
-                all_nft_info: {
-                    include_expired: true,
-                    token_id: i.toString()
-                }
-            });
-            bar.update(i)
-            collections[i] = nft
+            try {
+                nft = await client.queryContractSmart(MINTER_CONTRACT, {
+                    all_nft_info: {
+                        include_expired: true,
+                        token_id: i.toString()
+                    }
+                });
+                bar.update(i)
+                collections[i] = nft
+            } catch (err) {
+                bar.stop()
+                console.log(`[ERROR] failed to get NFT #${i}, err: ${err}`)
+                return
+            }
+
         } else {
             nft = collections[i.toString()]
         }
