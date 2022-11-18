@@ -19,11 +19,16 @@ export const builder = {
     contract: {
         type: String,
         require: true
+    },
+    'count-none': {
+        type: Boolean,
+        require: true,
+        default: false
     }
 };
 
 export const handler = async function (argv: yargs.ArgumentsCamelCase) {
-    const { rpc_endpoint, contract } = argv
+    const { rpc_endpoint, contract, countNone } = argv
     const client = await CosmWasmClient.connect(rpc_endpoint);
 
     let config = await client.queryContractSmart(contract, { config: {} });
@@ -70,7 +75,7 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
         }
 
         for (const attr of nft.info.extension.attributes) {
-            if (attr.value === 'None') {
+            if (!countNone && attr.value === 'None') {
                 continue
             }
             if (!rarity[attr.trait_type]) {
@@ -125,8 +130,6 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
             console.log(nft)
         }
     }
-
-
 
     // console.log(collections)
     fs.writeFileSync(`${COLLECTION_DIR}/collection.json`, JSON.stringify(collections, null, 4))
