@@ -4,7 +4,7 @@ import yargs from "yargs";
 import { CosmWasmClient } from "cosmwasm";
 
 import { CmdRarity } from "../../pkg/discord/CmdRarity";
-import { Collection } from "../../pkg/collections/Collection"
+import { Collection, CollectionList } from "../../pkg/collections"
 
 import { REST, Routes, Client, SlashCommandBuilder, GatewayIntentBits, EmbedBuilder } from "discord.js";
 
@@ -33,16 +33,11 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
     const rest = new REST({ version: '10' }).setToken(discord_token);
     const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-    const collections = [
-        new Collection("riot"),
-        new Collection("toripunks"),
-    ]
-
     const error_resp = new EmbedBuilder()
         .setColor(0x0099FF)
         .setTitle(`This collection does not exist`)
         .addFields(
-            ...collections.map((x: Collection) => ({
+            ...CollectionList.map((x: Collection) => ({
                 name: x.name,
                 value: "\u200B"
             }))
@@ -52,7 +47,7 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
     await rest.put(Routes.applicationCommands(discord_client_id), {
         body: [
             CmdRarity.cmd,
-            ...collections.map((x) => x.GetSlashCmd())
+            ...CollectionList.map((x) => x.GetSlashCmd())
         ]
     }).catch((err) => console.error(err));
 
@@ -69,9 +64,9 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
 
         if (interaction.commandName === 'rarity') {
             const collection_name = interaction.options.get("collection", true)?.value
-            cmd = collections.find((x: Collection) => x.name === collection_name)
+            cmd = CollectionList.find((x: Collection) => x.name === collection_name)
         } else {
-            cmd = collections.find((x: Collection) => x.GetSlashCmdName() === interaction.commandName)
+            cmd = CollectionList.find((x: Collection) => x.GetSlashCmdName() === interaction.commandName)
         }
 
         if (!cmd) {

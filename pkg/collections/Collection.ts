@@ -5,7 +5,7 @@ import * as cliProgress from "cli-progress"
 import { EmbedBuilder, SlashCommandBuilder, SlashCommandIntegerOption, CommandInteraction, Client } from "discord.js";
 
 
-export class Collection {
+export default class Collection {
     public name: string;
 
     protected collection_dir: string;
@@ -199,7 +199,7 @@ export class Collection {
         return config
     }
 
-    protected get_collection_item(id: Number) {
+    public get_collection_item(id: Number) {
         const collections = JSON.parse(fs.readFileSync(`${this.collection_dir}/collection.json`, 'utf-8'))
 
         const nft = Object.values(collections)

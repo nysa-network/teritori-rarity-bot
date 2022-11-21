@@ -1,7 +1,6 @@
-import { Collection } from "./Collection";
-import { CosmWasmClient } from "cosmwasm";
+import Collection from "./Collection";
 
-export class Toripunks extends Collection {
+export default class Toripunks extends Collection {
     name: string = "toripunks"
 
     constructor() {

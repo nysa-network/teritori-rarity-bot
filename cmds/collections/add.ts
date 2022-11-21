@@ -2,9 +2,7 @@ import * as fs from "fs";
 
 import yargs from "yargs";
 import { CosmWasmClient } from "cosmwasm";
-import * as cliProgress from "cli-progress"
-import { Collection } from "../../pkg/collections/Collection";
-import { Toripunks } from "../../pkg/collections/Toripunks";
+import { CollectionList, Collection, Toripunks } from "../../pkg/collections";
 
 export const command = "add";
 
@@ -33,19 +31,12 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
 
     const client = await CosmWasmClient.connect(rpc_endpoint);
 
-    const collections = {
-        "toripunks": Toripunks
-    }
-
-    let collection: Collection;
-
-    if (collections[name]) {
-        collection = await new collections[name](client, name, contract)
-    } else {
+    let collection = CollectionList.find((x: Collection) => x.name === name)
+    if (!collection) {
         collection = new Collection(name)
     }
 
-    await collection.Import(client, contract)
+    await collection?.Import(client, contract)
 
     client.disconnect()
 }

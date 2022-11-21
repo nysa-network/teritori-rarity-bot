@@ -1,7 +1,5 @@
 import { EmbedBuilder, SlashCommandBuilder, PermissionFlagsBits, SlashCommandStringOption, SlashCommandIntegerOption, CommandInteraction, Client } from "discord.js";
 
-import { get_collection, get_config } from "../collections/utils";
-
 export const CmdRarity: any = {
     name: "rarity",
     description: "Check your NFT rarity",
