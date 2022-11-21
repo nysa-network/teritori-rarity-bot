@@ -4,7 +4,7 @@ import yargs from "yargs";
 import { CosmWasmClient } from "cosmwasm";
 
 import { CmdRarity } from "../../pkg/discord/CmdRarity";
-import { Collection } from "../../pkg/discord/Collection"
+import { Collection } from "../../pkg/collections/Collection"
 
 import { REST, Routes, Client, SlashCommandBuilder, GatewayIntentBits, EmbedBuilder } from "discord.js";
 
@@ -34,8 +34,8 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
     const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
     const collections = [
-        new Collection("rarity-riot", "riot", "R!OT"),
-        new Collection("rarity-toripunk", "toripunk", "TPK"),
+        new Collection("riot"),
+        new Collection("toripunks"),
     ]
 
     const error_resp = new EmbedBuilder()
@@ -71,7 +71,7 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
             const collection_name = interaction.options.get("collection", true)?.value
             cmd = collections.find((x: Collection) => x.name === collection_name)
         } else {
-            cmd = collections.find((x: Collection) => x.cmd === interaction.commandName)
+            cmd = collections.find((x: Collection) => x.GetSlashCmdName() === interaction.commandName)
         }
 
         if (!cmd) {
@@ -86,7 +86,6 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
         } catch (err) {
             console.log(`[ERROR] ${interaction.commandName}: `, interaction.options, err)
             await interaction.reply(err)
-            // interaction.reply("An error occured, please contact an administrator")
             return
         }
     });

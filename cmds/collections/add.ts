@@ -3,7 +3,8 @@ import * as fs from "fs";
 import yargs from "yargs";
 import { CosmWasmClient } from "cosmwasm";
 import * as cliProgress from "cli-progress"
-import { formatEmoji } from "discord.js";
+import { Collection } from "../../pkg/collections/Collection";
+import { Toripunks } from "../../pkg/collections/Toripunks";
 
 export const command = "add";
 
@@ -21,127 +22,30 @@ export const builder = {
         type: String,
         require: true
     },
-    'count-none': {
-        type: Boolean,
-        require: true,
-        default: false
+    name: {
+        type: String,
+        require: true
     }
 };
 
 export const handler = async function (argv: yargs.ArgumentsCamelCase) {
-    const { rpc_endpoint, contract, countNone } = argv
+    const { rpc_endpoint, contract, name, countNone } = argv
+
     const client = await CosmWasmClient.connect(rpc_endpoint);
 
-    let config = await client.queryContractSmart(contract, { config: {} });
-    config.contract = contract
-
-    const COLLECTION_DIR = `collections/${config.nft_symbol}`
-
-    if (!fs.existsSync(COLLECTION_DIR)) {
-        fs.mkdirSync(COLLECTION_DIR);
+    const collections = {
+        "toripunks": Toripunks
     }
-    fs.writeFileSync(`${COLLECTION_DIR}/config.json`, JSON.stringify(config, null, 4))
 
+    let collection: Collection;
 
-    const MINTER_CONTRACT = config.nft_addr
-
-    let rarity = {}
-    let collections = {}
-
-    const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
-
-    let file_exist = false
-    if (fs.existsSync(`${COLLECTION_DIR}/collection.json`)) {
-        collections = JSON.parse(fs.readFileSync(`${COLLECTION_DIR}/collection.json`, 'utf-8'))
-        file_exist = true
+    if (collections[name]) {
+        collection = await new collections[name](client, name, contract)
     } else {
-        bar.start(config.nft_max_supply, 1);
+        collection = new Collection(name)
     }
 
-
-    for (let i = 1; i <= Number(config.nft_max_supply); i++) {
-        let nft;
-
-        if (!file_exist) {
-            try {
-                nft = await client.queryContractSmart(MINTER_CONTRACT, {
-                    all_nft_info: {
-                        include_expired: true,
-                        token_id: i.toString()
-                    }
-                });
-                bar.update(i)
-                collections[i] = nft
-            } catch (err) {
-                bar.stop()
-                console.log(`[ERROR] failed to get NFT #${i}, err: ${err}`)
-                return
-            }
-
-        } else {
-            nft = collections[i.toString()]
-        }
-
-        for (const attr of nft.info.extension.attributes) {
-            if (!countNone && attr.value === 'None') {
-                continue
-            }
-            if (!rarity[attr.trait_type]) {
-                rarity[attr.trait_type] = {}
-            }
-            if (!rarity[attr.trait_type][attr.value]) {
-                rarity[attr.trait_type][attr.value] = {
-                    count: 0,
-                }
-            }
-            rarity[attr.trait_type][attr.value].count += 1
-        }
-    }
-
-    // Compute attributes rarity and score
-    for (let [trait, values] of Object.entries(rarity)) {
-        for (let [val, _] of Object.entries(values as any)) {
-            rarity[trait][val].score = 1 / rarity[trait][val].count / config.nft_max_supply
-        }
-    }
-
-    // Set scores on nft
-    for (let [id, nft] of Object.entries(collections)) {
-        let score = 0
-        for (const attr of (nft as any).info.extension.attributes) {
-            if (!rarity[attr.trait_type][attr.value]) {
-                continue
-            }
-
-            score += rarity[attr.trait_type][attr.value].score
-        }
-        collections[id.toString()].id = id
-        collections[id.toString()].score = score * 1000
-    }
-
-    // Sort by rarity (score)
-    const ordered_collections = Object.values(collections)
-        .map((x: any) => ({
-            id: x.id,
-            score: x.score,
-        }))
-        .sort((a: any, b: any) => {
-            if (a.score < b.score) return 1
-            if (a.score > b.score) return -1
-            return 0
-        })
-
-
-    for (let [i, nft] of Array.from(ordered_collections.entries())) {
-        collections[nft.id].position = i + 1
-        if (i < 5) {
-            console.log(nft)
-        }
-    }
-
-    // console.log(collections)
-    fs.writeFileSync(`${COLLECTION_DIR}/collection.json`, JSON.stringify(collections, null, 4))
-    bar.stop()
+    await collection.Import(client, contract)
 
     client.disconnect()
 }
