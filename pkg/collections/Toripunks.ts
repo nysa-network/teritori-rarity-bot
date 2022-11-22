@@ -26,6 +26,8 @@ export default class Toripunks extends Collection {
                 score += rarity[attr.trait_type][attr.value].score
                 if (attr.trait_type === "1:1") {
                     score += 100_000
+                } else if (attr.trait_type === "Exclusive") {
+                    score += 10_000
                 }
             }
             collections[id.toString()].id = id
