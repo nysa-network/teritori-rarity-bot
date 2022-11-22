@@ -30,7 +30,14 @@ export default class Collection {
         let { rarity, collections } = await this.parse(cosmwasmClient, contract)
         collections = await this.computeScore(rarity, collections)
 
-        fs.writeFileSync(`${this.collection_dir}/collection.json`, JSON.stringify(collections, null, 4))
+        console.log(`write collection`, this.collection_dir)
+        console.log(collections["9542"]);
+
+        try {
+            fs.writeFileSync(`${this.collection_dir}/collection.json`, JSON.stringify(collections, null, 4))
+        } catch (err) {
+            console.error("error", err)
+        }
     }
 
     GetSlashCmdName(): string {
