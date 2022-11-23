@@ -15,7 +15,9 @@ export default class Collection {
         this.name = name
 
         this.collection_dir = `./collections/${this.name}`
-        this.config = JSON.parse(fs.readFileSync(`${this.collection_dir}/config.json`, 'utf-8'))
+        if (fs.existsSync(`${this.collection_dir}/config.json`)) {
+            this.config = JSON.parse(fs.readFileSync(`${this.collection_dir}/config.json`, 'utf-8')) || null
+        }
     }
 
     async Import(cosmwasmClient: CosmWasmClient, contract: string) {
@@ -29,9 +31,6 @@ export default class Collection {
 
         let { rarity, collections } = await this.parse(cosmwasmClient, contract)
         collections = await this.computeScore(rarity, collections)
-
-        console.log(`write collection`, this.collection_dir)
-        console.log(collections["9542"]);
 
         try {
             fs.writeFileSync(`${this.collection_dir}/collection.json`, JSON.stringify(collections, null, 4))

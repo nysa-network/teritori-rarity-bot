@@ -1,0 +1,19 @@
+{
+    "owner": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "minter": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "nft_addr": "tori1c2f79k5kykr5s4zhknn5w56hs5c9a8zxh4w03x07dnzwyrcj4pfs9ytu6s",
+    "nft_symbol": "SS",
+    "nft_max_supply": "666",
+    "nft_price_amount": "50000000",
+    "nft_base_uri": "ipfs://bafybeieabrklhrkik56brcigpw46xpi7keizvutdyazdaz4clvfc4rjfqu/collection.json",
+    "mint_start_time": 1668794511,
+    "whitelist_mint_period": 10000,
+    "whitelist_mint_max": "6",
+    "whitelist_mint_price_amount": "42000000",
+    "is_mintable": true,
+    "mint_max": "13",
+    "price_denom": "utori",
+    "royalty_percentage": 9,
+    "royalty_payment_address": "tori1pwd0pkzvr7ad2lersrfr2vpntnl2x0a2nexp6g",
+    "contract": "tori1x22q8lfhz7qcvtzs0dakhgx2th64l79kepjujhhxk5x804taeqlqmhm4sz"
+}
