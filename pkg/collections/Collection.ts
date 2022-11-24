@@ -205,6 +205,11 @@ export default class Collection {
         return config
     }
 
+    public get_collection() {
+        const collections = JSON.parse(fs.readFileSync(`${this.collection_dir}/collection.json`, 'utf-8'))
+        return collections
+    }
+
     public get_collection_item(id: Number) {
         const collections = JSON.parse(fs.readFileSync(`${this.collection_dir}/collection.json`, 'utf-8'))
 
@@ -213,5 +218,4 @@ export default class Collection {
 
         return nft
     }
-
 }
