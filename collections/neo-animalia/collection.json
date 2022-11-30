@@ -1,0 +1,392 @@
+{
+    "1": {
+        "access": {
+            "owner": "tori14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s3hewys",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Ghost the Wild Dog",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/1.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Ghost"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "Ghost the wild dog is an elitest. Although he hunts in a pack, there is a reason why only he is wanted dead or alive by the Order of Claws. One last thing... he NEVER crosses platforms."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "1",
+        "score": 220.00000000000003,
+        "position": 1
+    },
+    "2": {
+        "access": {
+            "owner": "tori14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s3hewys",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Charge the Rhino",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/2.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Charge"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "Charge always rushes in on his foes, surprising them and throwing them off guard. Just stay behind Charge and he will take on the weight to make space for the little guys."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "2",
+        "score": 220.00000000000003,
+        "position": 2
+    },
+    "3": {
+        "access": {
+            "owner": "tori15tvyedv30t659lhhdal9q20rq4a8w0tdjcjkdd",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Wiser the Kudu",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/3.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Wiser"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "Wiser once said: 'You can turn a blind eye to the truth, but it seldom leads to prosperity'. When everything hangs in the balance what will you choose? Light or darkness? Look for answers where none is the Wiser, the avatar of choice driven games."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "3",
+        "score": 220.00000000000003,
+        "position": 3
+    },
+    "4": {
+        "access": {
+            "owner": "tori14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s3hewys",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: QWERTY the Monkey",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/4.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "QWERTY"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "QWERTY, the skeleton key of tactical games. He has reflexes as sharp as his mind. As his name implies, he is master of the keyboard. He wears keys like a second skin. He knows macro buttons better than he knows himself. His only weakness... Coffee."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "4",
+        "score": 220.00000000000003,
+        "position": 4
+    },
+    "5": {
+        "access": {
+            "owner": "tori14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s3hewys",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Alias the Hare",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/5.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Alias"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "How deep does the rabbit hole go? Alias would know. But only one side of him would tell the truth. So which is it, the red or blue? He is the avatar of coop games. Player 1 and player 2, just like his personalities, can be friend or foe."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "5",
+        "score": 220.00000000000003,
+        "position": 5
+    },
+    "6": {
+        "access": {
+            "owner": "tori14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s3hewys",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Elly the Elephant",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/6.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Elly"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "Elly has unmatchable rhythm. She treads lightly, almost without a sound, making room for the most pumped up beats and catchy tunes you can imagine."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "6",
+        "score": 220.00000000000003,
+        "position": 6
+    },
+    "7": {
+        "access": {
+            "owner": "tori1scpm8wukdq52lqs2g9d9ulcza4yeyy5qj7lv5x",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Clickbait the Cat",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/7.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Clickbait"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "You never hear her, but you always see her. She never hunts, but rather lie down waiting to be seen just before it is too late for her foes to escape. Clickbait's striking beauty takes you in her clutches match after match of point and click skilled shooter games."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "7",
+        "score": 220.00000000000003,
+        "position": 7
+    },
+    "8": {
+        "access": {
+            "owner": "tori14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s3hewys",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Binary the Horse",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/8.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Binary"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "She is the queen of code. Very rarely is she credited for the awe of gamers. Binary runs to create and share infinite possibilities of adventure filled worlds. She has the still lit valleys of the Elves, the mountain's rumbles of the vikings and the clash of swords all at her feet."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "8",
+        "score": 220.00000000000003,
+        "position": 8
+    },
+    "9": {
+        "access": {
+            "owner": "tori1tc8fd2hewvurmhsta3juxkdpzfnu2wdadutwyx",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: LOL the Hyena",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/9.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "LOL"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "The lighthearted troll or the expert among noobs? LOL. She is both beauty and beast. It is easy for LOL to shrug off some shots fired at her, when she is by far the most talented avatar in the lobby. Noobs laugh because she is different, LOL laughs, because they are all the same."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "9",
+        "score": 220.00000000000003,
+        "position": 9
+    },
+    "10": {
+        "access": {
+            "owner": "tori14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s3hewys",
+            "approvals": []
+        },
+        "info": {
+            "token_uri": null,
+            "extension": {
+                "name": "Neo Animalia: Honeyli the Honey Bee",
+                "description": "A unique 10 piece collection inspired by the fascinating South African wildlife in conjunction with gaming aesthetic and elements. This set was brought to life by the artist, Rowan and launched by Area47 as the first 1 of 1 project on the Tori network",
+                "image": "ipfs://bafybeih26nxbiyb45d5ajgaw4s5ybyruzbbulyx3sr5ut6b5ivdrahu5fy/10.jpg",
+                "animation_url": null,
+                "external_url": "",
+                "attributes": [
+                    {
+                        "trait_type": "name",
+                        "value": "Honeyli"
+                    },
+                    {
+                        "trait_type": "bio",
+                        "value": "Flies like a bee, stings like a bee. Honeyli always keeps a cool head and heart due to the sweet liquid honey coursing through her body. If things get heated, you can count on her to get you out of a tough situation."
+                    },
+                    {
+                        "trait_type": "artist",
+                        "value": "Rowan"
+                    },
+                    {
+                        "trait_type": "creator",
+                        "value": "Area47"
+                    }
+                ],
+                "royalty_percentage": 10,
+                "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45"
+            }
+        },
+        "id": "10",
+        "score": 220.00000000000003,
+        "position": 10
+    }
+}

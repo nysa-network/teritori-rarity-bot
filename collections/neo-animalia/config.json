@@ -1,0 +1,19 @@
+{
+    "owner": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "minter": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "nft_addr": "tori172v738ut05le2272gm6akv9hw2jqfwfkm7ej7ndy53skxq757s5szfrrt3",
+    "nft_symbol": "NEOA",
+    "nft_max_supply": "10",
+    "nft_price_amount": "16000000",
+    "nft_base_uri": "ipfs://bafybeidond32hdgd75swa7ccylim3ij2kr3nweaxx3a36azltiypvuwpcy/collection.json",
+    "mint_start_time": 1669378650,
+    "whitelist_mint_period": 21600,
+    "whitelist_mint_max": "1",
+    "whitelist_mint_price_amount": "13000000",
+    "is_mintable": true,
+    "mint_max": null,
+    "price_denom": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+    "royalty_percentage": 10,
+    "royalty_payment_address": "tori1ws5zx249dtysk2kk8f6mqt9w8ga5l3gkthzp45",
+    "contract": "tori1rcmvfsn77pd6m04ctqj3wcu66pvrw9p265cdl72w4zarfup2rv7qnjklmn"
+}

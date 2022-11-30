@@ -5,6 +5,7 @@ export const CollectionList = [
     new Collection("riot"),
     new Collection("yield-gorillas"),
     new Collection("sweet-succubi"),
+    new Collection("neo-animalia"),
     new Toripunks(),
 ]
 
