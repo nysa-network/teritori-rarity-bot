@@ -1,0 +1,19 @@
+{
+    "owner": "tori18q9qjrpa3ml6f7nzww8tpt8np3h6tf2e8t29tx",
+    "minter": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "nft_addr": "tori149ltwdnpxrhx9al42s359glcjnsuc6x3dalz28f04dsxhlu7jhmqpkeg75",
+    "nft_symbol": "YGS",
+    "nft_max_supply": "10000",
+    "nft_price_amount": "2000000",
+    "nft_base_uri": "ipfs://bafybeidhcog7aluqopgvueclpzurgnxj6yeoaogoy5ipukxu72jdetbxtq/collection.json",
+    "mint_start_time": 1668615101,
+    "whitelist_mint_period": 72000,
+    "whitelist_mint_max": "5",
+    "whitelist_mint_price_amount": "1000000",
+    "is_mintable": true,
+    "mint_max": null,
+    "price_denom": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+    "royalty_percentage": 8,
+    "royalty_payment_address": "tori1uyxdrvnmk69m6se8wa2l8ggct94zhlp8v5xkar",
+    "contract": "tori1999u8suptza3rtxwk7lspve02m406xe7l622erg3np3aq05gawxsrh9g0p"
+}
