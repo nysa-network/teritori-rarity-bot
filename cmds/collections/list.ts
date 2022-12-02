@@ -39,7 +39,8 @@ export const handler = async function (argv: yargs.ArgumentsCamelCase) {
         })
         .map((x: any, index: number) => ({
             id: x.id,
-            position: index + 1
+            position: index + 1,
+            traits: x.info.extension.attributes
         }))
 
     if (limit) {
