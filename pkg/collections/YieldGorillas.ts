@@ -26,7 +26,9 @@ export default class YieldGorillas extends Collection {
                 score += rarity[attr.trait_type][attr.value].score
 
                 if (attr.trait_type === "Skin") {
-                    if (["Bull", "Legend"].includes(attr.value)) {
+                    if (["Legend"].includes(attr.value)) {
+                        score += 1500
+                    } else if (["Bull"].includes(attr.value)) {
                         score += 1000
                     } else if (["Mooned"].includes(attr.value)) {
                         score += 500
