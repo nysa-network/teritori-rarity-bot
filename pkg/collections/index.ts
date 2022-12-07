@@ -7,6 +7,7 @@ export const CollectionList = [
     new YieldGorillas(),
     new Collection("sweet-succubi"),
     new Collection("neo-animalia"),
+    new Collection("the-others"),
     new Toripunks(),
 ]
 

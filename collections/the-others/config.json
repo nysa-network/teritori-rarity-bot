@@ -1,0 +1,19 @@
+{
+    "owner": "tori18l7s8usfy5fsekme5mhyv4lhmxpx39zy4lnm27",
+    "minter": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "nft_addr": "tori1q6zlut7gtkzknkk773jecujwsdkgq882zxj6hh0hv7my9qwfn90q608n9m",
+    "nft_symbol": "TO",
+    "nft_max_supply": "666",
+    "nft_price_amount": "200000",
+    "nft_base_uri": "ipfs://bafybeiabm2irwv6tzswwhcq7uc2gf2wrax4pob4kgsjdvhg7vgm7wgo2z4/collection.json",
+    "mint_start_time": 1669883503,
+    "whitelist_mint_period": 14400,
+    "whitelist_mint_max": "3",
+    "whitelist_mint_price_amount": "0",
+    "is_mintable": true,
+    "mint_max": "25",
+    "price_denom": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+    "royalty_percentage": 4,
+    "royalty_payment_address": "tori1peml9wlgz53vc9m4e622wvftv6tccld2f2qn0v",
+    "contract": "tori1r0krq4hfttfuyd4tvcqnjk887xqeq0xae3u4qtya35qsfqy2trlqrdeqq0"
+}
