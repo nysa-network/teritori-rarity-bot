@@ -1,0 +1,20 @@
+{
+    "owner": "tori18l7s8usfy5fsekme5mhyv4lhmxpx39zy4lnm27",
+    "minter": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "nft_addr": "tori1xfxjgw68eee6qdlyarn0h2v3wz939dqddpufpc2zzdz3cqj5wa2qzawnhs",
+    "nft_symbol": "MdG",
+    "nft_max_supply": "214",
+    "nft_price_amount": "275000000",
+    "nft_base_uri": "ipfs://bafybeiey34voav7oc6oyc3xvu6r7eqq7voie7abqaqkq2vpmaimwxbbrpi/collection.json",
+    "mint_start_time": 1671033600,
+    "whitelist_mint_period": 86400,
+    "whitelist_mint_max": "3",
+    "whitelist_mint_price_amount": "170000000",
+    "is_mintable": true,
+    "mint_max": null,
+    "price_denom": "utori",
+    "secondary_during_mint": null,
+    "royalty_percentage": 7,
+    "royalty_payment_address": "tori1w4gw47ke2reqk3035p25rya5x738wze973m3mf",
+    "contract": "tori1tts0gaza45trf3k5w30yex8dlzq674zlfazncwhpc98uc70p6smqnhsrrm"
+}
