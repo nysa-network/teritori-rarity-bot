@@ -1,0 +1,20 @@
+{
+    "owner": "tori13ufa3yvtcxj8w8mwgtdp9vt4m4yepkhzlcv3eg",
+    "minter": "tori1x3mkdhgzmym0x7mhpsqxyrylfrv7merj8xrlfc",
+    "nft_addr": "tori1me6t602jlndzxgv2d7ekcnkjuqdp7vfhczrfnv2s2k3zmhlghqks5ep9af",
+    "nft_symbol": "CAT",
+    "nft_max_supply": "444",
+    "nft_price_amount": "1200000",
+    "nft_base_uri": "ipfs://bafybeid7yjetzmgyntoisnvrfjze6c6qmiqz3pnaqfu6dzgauxflhnxkzi/collection.json",
+    "mint_start_time": 1671627766,
+    "whitelist_mint_period": 28800,
+    "whitelist_mint_max": "3",
+    "whitelist_mint_price_amount": "1000000",
+    "is_mintable": true,
+    "mint_max": null,
+    "price_denom": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+    "secondary_during_mint": null,
+    "royalty_percentage": 7,
+    "royalty_payment_address": "tori16smqfmr4hv88tn9235t2wwxw2a3yx7zgfzsmr9",
+    "contract": "tori1kf8hjd3tnjrxfv5e9gpm4kmgcr7rw0d57e574g929xtvjjvuvklspftegy"
+}

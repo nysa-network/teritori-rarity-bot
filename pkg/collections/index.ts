@@ -9,6 +9,7 @@ export const CollectionList = [
     new Collection("neo-animalia"),
     new Collection("the-others"),
     new Collection("maestro-del-gelotto"),
+    new Collection("cyberAI-teritori"),
     new Toripunks(),
 ]
 
