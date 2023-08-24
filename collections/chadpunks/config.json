@@ -1,0 +1,20 @@
+{
+    "owner": "tori18lsua9yhn0mvdn9fd8m9drftxrhht65kd4n87u",
+    "minter": "tori145q3pu607plscsm0qhv5xqygumlhjra2au9mm0",
+    "nft_addr": "tori1zaucrl9a40fh5aqg087u9mavkpfdrmrzaxh4tfntn6dns557mgjqf2xc4p",
+    "nft_symbol": "CPK",
+    "nft_max_supply": "1000",
+    "nft_price_amount": "2000000000",
+    "nft_base_uri": "ipfs://bafybeicoyejlvqmuegzpxguid62io25phhjph23zk77bpnynsisle7qi6q/collection.json",
+    "mint_start_time": 1689098400,
+    "whitelist_mint_period": 86400,
+    "whitelist_mint_max": "10",
+    "whitelist_mint_price_amount": "1820000000",
+    "is_mintable": true,
+    "mint_max": null,
+    "price_denom": "utori",
+    "secondary_during_mint": null,
+    "royalty_percentage": 10,
+    "royalty_payment_address": "tori1kxekm829l9y8ae6nketyywx6ncnngy9x3esgqm",
+    "contract": "tori1a8h38nsxu254trpfm0z65mrvguhp544mf9e36670ltm4s89y5wjq7mqevy"
+}
